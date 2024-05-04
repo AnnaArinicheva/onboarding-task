@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Результат работы программы</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Отправить</button>
+    </form>
+        <p>Результат:</p>
+        <img src="{% static 'images/myplot.png' %}" alt="My Plot">
+</body>
+</html>
+
